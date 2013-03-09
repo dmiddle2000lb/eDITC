@@ -1,0 +1,8 @@
+<% if ( model.get('spotify') ) { %>
+<a href="#" class="btn btn-large btn-primary add-to-playlist" data-spotify="<%= model.get('spotify').split(':')[2] %>">
+  Add to Playlist
+</a>
+<% } else {%>
+<input class="refine-search" type="text" value="<%= decodeURIComponent(model.term) %>"/>
+<li class="refine">refine</li>
+<% } %>

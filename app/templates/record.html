@@ -1,0 +1,14 @@
+<a href="<%= model.get('viewItemURL') %>" class="pull-left">
+  <img class="media-object" src="<%= model.get('galleryURL') %>" alt="" height="80" width="80">
+</a>
+<div class="media-body">
+  <h4 class="media-hearing"><%= model.get('title') %></h4>
+  <p><%= model.get('sellingStatus')[0].currentPrice[0].__value__ %></p>
+  <p>
+    <% if (model.get('sellingStatus')[0].bidCount) { %>
+    <%= model.get('sellingStatus')[0].bidCount[0] %></p>
+    <% } else { %>
+      <p>BuyItNow</p>
+    <% } %>
+  <div class="sample"></div>
+</div>
